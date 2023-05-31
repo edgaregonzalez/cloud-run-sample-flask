@@ -2,7 +2,7 @@ import logging
 import os
 
 from flask import Flask
-from secure import require_apikey
+#from secure import require_apikey
 
 
 app = Flask(__name__)
@@ -14,7 +14,6 @@ def health():
 
 
 @app.route('/hello')
-@require_apikey
 def hello():
     return {'hello': 'world'}
 
